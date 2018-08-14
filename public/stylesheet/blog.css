@@ -1,0 +1,47 @@
+body {
+  background-color: rgb(241, 230, 185);
+}
+
+.app-header {
+  background-color: lightblue;
+  font-size: 2.5em;
+  text-align: center;
+  height: 60px;
+  margin-bottom: 0;
+}
+
+.row {
+  margin: 30px 0;
+}
+
+.row ul {
+  list-style: none;
+}
+
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.main {
+  flex: 70%;
+  background-color: rgb(241, 230, 185);
+  padding: 20px;
+}
+
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.blog-list {
+  margin-bottom: 30px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #ddd;
+}
