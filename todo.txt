@@ -1,0 +1,6 @@
+Function:
+1/ forgot password
+2/ upload image
+3/ profile
+4/ comments
+5/ likes

@@ -16,7 +16,10 @@
 </head>
 
 <body>
-    <h1 class="app-header">B!og</h1>
+    <div class="app-header">
+        <h1>B!og</h1>
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -39,8 +42,11 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
-        <div class="nav-item">
-            <a class="nav-link" href="#">Logout</a>
+        <div class="nav-item dropdown" style="padding-left: 10px;">
+            <img src="banana.jpg" alt="Avatar" class="avatar dropbtn">
+            <div id="avatarDropdown" class="dropdown-content">
+                <a href="#">Log out</a>
+            </div>
         </div>
     </nav>
 
@@ -63,7 +69,7 @@
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                         exercitation ullamco.</p>
                     <p>Author: Someone</p>
-                    <button>Read more</button>
+                    <a href="#" class="btn-info">Read more</a>
                     <hr>
                 </li>
                 <li>
@@ -74,7 +80,7 @@
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                         exercitation ullamco.</p>
                     <p>Author: Someone</p>
-                    <button>Read more</button>
+                    <a href="#" class="btn-info">Read more</a>
                     <hr>
                 </li>
                 <li>Post3</li>
@@ -86,6 +92,33 @@
     <div class="footer">
         <h2>Footer</h2>
     </div>
+
+    <script>
+        /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
+        function myFunction() {
+            $("#avatarDropdown").addClass("show");
+            console.log("hi");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        $(".avatar").on("click", myFunction);
+    </script>
 </body>
 
 </html>
